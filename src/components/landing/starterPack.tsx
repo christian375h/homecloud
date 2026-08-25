@@ -8,37 +8,25 @@ export function ContentSectionOne() {
         <div className="container mx-auto grid items-center lg:grid-cols-2">
           <div className="row-start-2 mt-12 lg:row-auto lg:mt-0 lg:pr-12">
             <Typography variant="h2" color="blue-gray" className="mb-6">
-              Basic Starter Pack
+              What is Home Cloud?
             </Typography>
             <Typography variant="lead" color="gray" className="mb-12">
-              I always felt like I could do anything. That&apos;s the main thing
-              people are controlled by! They&apos;re slowed down by{" "}
-              <a
-                href="#"
-                className="underline underline-offset-4 transition-colors hover:text-blue-500"
-              >
-                their perception of themselves
-              </a>
-              . If you&apos;re taught you can&apos;t do anything, you won&apos;t
-              do anything. I was taught I could do everything.
+              Simply put we are a service that installs easily accessable, affordable and
+              private cloud storage right inside your home. We aim to offer the same
+              convienience as Google Drive, Google Photos, iCloud, Dropbox and more while
+              giving you real ownership of your personal information.
               <br />
               <br />
-              The time is now for it to be okay to be great. For being a bright
-              color. For standing out. But the time is now to be okay to{" "}
-              <a
-                href="#"
-                className="underline underline-offset-4 transition-colors hover:text-blue-500"
-              >
-                be the greatest you
-              </a>
-              . Would you believe in what you believe in, if you were the only one
-              who believed it?
+              We will transfer away personal data like photos, passwords, documents and
+              credit card information into a secure storage server located right inside your
+              home instead of some data center located across the world.
               <br />
               <br />
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              You can also say goodbye to those monthy subscription fees that corporations
+              require you to pay just to maintain access to your photos and documents. With
+              your personal home cloud you keep that same convienient access to your information
+              from anywhere in the world, bypassing the need to pay those subscriptions
+              that just keep getting more and more expensive.
             </Typography>
             <div className="inline-flex flex-wrap gap-3">
               <Button variant="outlined" color="dark" size="lg">
@@ -48,7 +36,7 @@ export function ContentSectionOne() {
             </div>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1680285251132-e1c238bf5e75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+            src="https://images.unsplash.com/photo-1703319952940-ec62d23def39?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="team work"
             className="max-h-[50vh] w-full rounded-xl object-cover object-center md:max-h-[75vh]"
           />

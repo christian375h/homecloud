@@ -8,6 +8,7 @@ import {
   ListItem,
 } from "@material-tailwind/react";
 import {
+  CloudIcon,
   QuestionMarkCircleIcon,
   ComputerDesktopIcon,
   Bars3Icon,
@@ -99,14 +100,15 @@ export default function Example() {
 
   return (
     <ThemeProvider>
-      <Navbar className="absolute mx-auto left-0 right-0 top-3 max-w-screen-xl px-4 py-2 z-10">
+      <Navbar className="absolute mx-auto left-0 right-0 max-w-screen-xl px-4 py-2 z-10">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
             href="/"
             variant="h6"
-            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+            className="flex items-center gap-2 mr-4 cursor-pointer py-1.5dflg:ml-2"
           >
+            <CloudIcon className="h-[25px] w-[25px]" />
             Home Cloud
           </Typography>
           <div className="hidden lg:block">
