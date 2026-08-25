@@ -1,6 +1,6 @@
 import ThemeProvider from "./theme-provider";
-import Navbar from "./defaultNavbar"
- 
+import Navbar from "./navbar.tsx"
+
 import { Typography, Input, Button } from "@material-tailwind/react";
 
 export function SignUp() {
