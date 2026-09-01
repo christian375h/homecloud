@@ -84,18 +84,14 @@ export function FeatureSectionOne() {
   return (
     <section className="py-28 px-4">
       <div className="container mx-auto mb-20 text-center">
-        <Typography color="dark" className="mb-2 font-bold text-lg">
-          Social Analytics
-        </Typography>
         <Typography variant="h2" color="blue-gray" className="mb-4">
-          Turn your idea into a startup
+          Bring Cloud Storage Home
         </Typography>
         <Typography
           variant="lead"
           className="mx-auto w-full px-4 text-blue-gray-800 md:w-10/12 lg:w-7/12 lg:px-8"
         >
-          We&apos;re constantly trying to express ourselves and actualize our
-          dreams. If you have the opportunity to play
+          Setting up secure and private access to your documents and photos is easier and cheaper than ever.
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-y-20 md:grid-cols-2 lg:grid-cols-3">

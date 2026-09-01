@@ -100,7 +100,7 @@ export default function Example() {
 
   return (
     <ThemeProvider>
-      <Navbar className="absolute mx-auto left-0 right-0 max-w-screen-xl px-4 py-2 z-10">
+      <Navbar fullWidth className="fixed mx-auto left-0 right-0 px-4 rounded-none py-2 z-10">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
