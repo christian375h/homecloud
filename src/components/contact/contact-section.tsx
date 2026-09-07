@@ -106,7 +106,7 @@ export function ContactSection() {
             </Card>
 
             {/* Contact Form Card */}
-            <Card className="lg:col-span-2 shadow-md">
+            <Card className="shadow-md">
               <CardBody className="p-8 sm:p-10">
                 {submitted ? (
                   <div className="text-center py-16">
