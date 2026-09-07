@@ -6,60 +6,23 @@ import {
   IconButton,
   List,
   ListItem,
+  Button,
 } from "@material-tailwind/react";
 import {
   CloudIcon,
   QuestionMarkCircleIcon,
   ComputerDesktopIcon,
+  ShieldCheckIcon,
+  EnvelopeIcon,
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 import ThemeProvider from "./theme-provider";
 
-
-const colors = {
-  blue: "bg-blue-50 text-blue-500",
-  orange: "bg-orange-50 text-orange-500",
-  green: "bg-green-50 text-green-500",
-  "blue-gray": "bg-blue-gray-50 text-blue-gray-500",
-  purple: "bg-purple-50 text-purple-500",
-  teal: "bg-teal-50 text-teal-500",
-  cyan: "bg-cyan-50 text-cyan-500",
-  pink: "bg-pink-50 text-pink-500",
-};
-
-// account pages menu
-const accountItems = [
-  {
-    title: "Login",
-    href: "/login"
-  },
-  {
-    title: "Sign Up",
-    href: "/signup"
-  }
-];
-// nav list menu
-const navListMenuItems = [
-  {
-    title: "About Us",
-    href: "/about"
-  },
-  {
-    title: "Landing Page",
-    href: "/landing"
-  },
-  {
-    title: "404",
-    href: "/404"
-  }
-];
-
-
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1 lg:gap-1">
       <Typography
         as="a"
         href="/products"
@@ -72,6 +35,20 @@ function NavList() {
           Products
         </ListItem>
       </Typography>
+
+      <Typography
+        as="a"
+        href="/care-plan"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <ShieldCheckIcon className="h-[18px] w-[18px]" />
+          Care Plan
+        </ListItem>
+      </Typography>
+
       <Typography
         as="a"
         href="/about"
@@ -84,48 +61,50 @@ function NavList() {
           About Us
         </ListItem>
       </Typography>
+
+      <Typography
+        as="a"
+        href="/contact"
+        variant="small"
+        color="blue-gray"
+        className="font-normal"
+      >
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
+          <EnvelopeIcon className="h-[18px] w-[18px]" />
+          Contact
+        </ListItem>
+      </Typography>
     </List>
   );
 }
 
-export default function Example() {
+export default function Header() {
   const [openNav, setOpenNav] = React.useState(false);
 
   React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+    const handleResize = () => window.innerWidth >= 960 && setOpenNav(false);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <ThemeProvider>
-      <Navbar fullWidth className="fixed mx-auto left-0 right-0 px-4 rounded-none py-2 z-10">
-        <div className="flex items-center justify-between text-blue-gray-900">
+      <Navbar fullWidth className="fixed top-0 left-0 right-0 z-50 rounded-none px-4 py-2">
+        <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
             href="/"
             variant="h6"
-            className="flex items-center gap-2 mr-4 cursor-pointer py-1.5dflg:ml-2"
+            className="flex items-center gap-2 mr-4 cursor-pointer py-1.5 font-bold"
           >
-            <CloudIcon className="h-[25px] w-[25px]" />
-            Home Cloud
+            <CloudIcon className="h-6 w-6 text-blue-600" />
+            Home Cloud LLC
           </Typography>
+
           <div className="hidden lg:block">
             <NavList />
           </div>
-          {/* <div className="hidden gap-2 lg:flex"> */}
-          {/*   <a href="./login"> */}
-          {/*     <Button variant="text" size="sm" color="blue-gray"> */}
-          {/*       Sign In */}
-          {/*     </Button> */}
-          {/*   </a> */}
-          {/*   <a href="/signup"> */}
-          {/*     <Button size="sm" color="dark"> */}
-          {/*       Sign Up */}
-          {/*     </Button> */}
-          {/*   </a> */}
-          {/* </div> */}
+
           <IconButton
             variant="text"
             color="blue-gray"
@@ -139,20 +118,21 @@ export default function Example() {
             )}
           </IconButton>
         </div>
+
         <Collapse open={openNav}>
-          <NavList />
-          {/* <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden"> */}
-          {/*   <a href="/login"> */}
-          {/*     <Button variant="outlined" size="sm" color="dark" fullWidth> */}
-          {/*       Sign In */}
-          {/*     </Button> */}
-          {/*   </a> */}
-          {/*   <a href="/signup"> */}
-          {/*     <Button size="sm" fullWidth color="dark"> */}
-          {/*       Sign Up */}
-          {/*     </Button> */}
-          {/*   </a> */}
-          {/* </div> */}
+          <div className="container mx-auto pb-2 pt-1">
+            <NavList />
+            <Button
+              as="a"
+              href="/contact"
+              size="sm"
+              fullWidth
+              color="blue-gray"
+              className="mt-2"
+            >
+              Get Started
+            </Button>
+          </div>
         </Collapse>
       </Navbar>
     </ThemeProvider>

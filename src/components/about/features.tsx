@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 import {
-  EyeIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
+  CurrencyDollarIcon,
+  LockClosedIcon,
+  EyeSlashIcon,
   BoltIcon,
   FaceSmileIcon,
   LinkIcon,
@@ -41,42 +42,42 @@ function FeatureCard({ icon, title, children }: FeatureCardProps) {
 
 const features = [
   {
-    icon: <EyeIcon className="h-6 w-6" strokeWidth={2} />,
-    title: "Check our team",
+    icon: <CurrencyDollarIcon className="h-6 w-6" strokeWidth={2} />,
+    title: "Zero Monthly Fees",
     description:
-      "For standing out. But the time is now to be okay to be the greatest you. Would you believe in what you believe in, if you were the only one",
+      "Pay once for your hardware and installation. Stop paying Google and Apple monthly subscriptions just to keep your storage.",
   },
   {
     icon: (
-      <ChatBubbleOvalLeftEllipsisIcon className="h-6 w-6" strokeWidth={2} />
+      <EyeSlashIcon className="h-6 w-6" strokeWidth={2} />
     ),
-    title: "Support 24/7",
+    title: "Complete Privacy",
     description:
-      "As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others.",
+      "Your photos and documents stay on a physical drive inside your home. No big corporations looking through your data for ads or training AI models.",
   },
   {
     icon: <BoltIcon className="h-6 w-6" strokeWidth={2} />,
-    title: "Unlimited revisions",
+    title: "Automatic Backup",
     description:
-      "We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love.",
+      "Seamlessly back up your high resolution photos and videos from your phone the second you take a picture or video.",
   },
   {
     icon: <FaceSmileIcon className="h-6 w-6" strokeWidth={2} />,
-    title: "Payments functionality",
+    title: "Simple Access",
     description:
-      "Like, one thing people can't say is that I'm not trying, and I'm not trying my hardest, and I'm not trying to do the best way I know how.",
+      "Access your photos, videos and files securely from anywhere in the world without exposing those files to the internet.",
   },
   {
-    icon: <LinkIcon className="h-6 w-6" strokeWidth={2} />,
-    title: "Improved platform",
+    icon: <LockClosedIcon className="h-6 w-6" strokeWidth={2} />,
+    title: "Automated Protection",
     description:
-      "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire other people to follow their dreams, too.",
+      "Built in redundancy and optional encrypted backups mean your memories stay protected against hardware failure.",
   },
   {
     icon: <HeartIcon className="h-6 w-6" strokeWidth={2} />,
-    title: "Prebuilt components",
+    title: "Local Support",
     description:
-      "We're an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.",
+      "No offshore call centers or AI chatbots. Get direct support and setup assistance from a local expert right here in the Salt Lake Area.",
   },
 ];
 

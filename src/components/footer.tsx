@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="copyright text-center text-sm text-muted">
           All rights reserved. Copyright
           © <script>
-            document.write(new Date().getFullYear()) 
+            document.write(new Date().getFullYear())
           </script>
           &nbsp;AstroLaunch UI by
           <a href="https://www.creative-tim.com" className="text-secondary ms-1" target="_blank">Creative Tim</a>.

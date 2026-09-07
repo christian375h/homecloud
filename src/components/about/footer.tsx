@@ -1,74 +1,56 @@
-import { Typography, Input, Button } from "@material-tailwind/react";
-import ThemeProvider from "../theme-provider";
+import { Typography } from "@material-tailwind/react";
 
+const footerNav = [
+  { name: "Products", href: "/products" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Privacy Policy", href: "/privacy" },
+  { name: "Terms of Service", href: "/terms" },
+  { name: "Contact", href: "/contact" },
+];
 
-const links = ["Overview", "Features", "Pricing", "Careers", "Help", "Privacy"];
-const links2 = ["Terms", "Privacy", "Cookies"];
 const currentYear = new Date().getFullYear();
 
-export function FooterOne() {
+export function FooterTwo() {
   return (
-    <ThemeProvider>
-      <footer className="mt-10 px-8 pt-20">
-        <div className="container mx-auto">
-          <div className="flex flex-wrap items-end justify-center gap-8 md:justify-between">
-            <div className="text-center md:text-left">
-              <Typography variant="h4" className="mb-6">
-                AstroLaunch UI
-              </Typography>
-              <ul className="flex flex-wrap items-center justify-center md:justify-start">
-                {links.map((link, idx) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="gray"
-                      className={`py-1 font-normal transition-colors hover:text-blue-gray-900 ${
-                        idx === 0 ? "pr-3" : "px-3"
-                      }`}
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="w-full sm:w-[24rem] sm:min-w-[24rem]">
-              <Typography variant="h6" color="blue-gray" className="mb-3">
-                Stay up to date
-              </Typography>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <Input color="black" label="Enter your email" />
-                <Button color="dark">subscribe</Button>
-              </div>
-            </div>
-          </div>
-          <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 gap-x-8 border-t border-blue-gray-50 py-6 md:justify-between">
-            <Typography color="gray" className="text-center font-normal">
-              &copy; {currentYear} Material Tailwind, All rights reserved.
+    <footer className="mt-10 px-8 pt-12 pb-6 border-t border-blue-gray-50">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8">
+          <div className="text-center md:text-left">
+            <Typography variant="h4" color="blue-gray" className="mb-1">
+              Home Cloud LLC
             </Typography>
-
-            <ul className="flex items-center">
-              {links2.map((link, idx) => (
-                <li key={link}>
-                  <Typography
-                    as="a"
-                    href="#"
-                    color="gray"
-                    className={`py-1 font-normal transition-colors hover:text-blue-gray-900 ${
-                      idx === links2.length - 1 ? "pl-2" : "px-2"
-                    }`}
-                  >
-                    {link}
-                  </Typography>
-                </li>
-              ))}
-            </ul>
+            <Typography color="gray" className="font-normal text-sm">
+              Take back control. Own your photos, media, and private data at home.
+            </Typography>
           </div>
+
+          <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {footerNav.map((item) => (
+              <li key={item.name}>
+                <Typography
+                  as="a"
+                  href={item.href}
+                  color="gray"
+                  className="text-sm font-normal transition-colors hover:text-blue-gray-900"
+                >
+                  {item.name}
+                </Typography>
+              </li>
+            ))}
+          </ul>
         </div>
-      </footer>
-    </ThemeProvider>
+
+        <div className="border-t border-blue-gray-50 pt-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+          <Typography color="gray" className="text-xs font-normal">
+            &copy; {currentYear} Home Cloud LLC. All rights reserved.
+          </Typography>
+          <Typography color="gray" className="text-xs font-normal">
+            Designed for privacy & local data ownership.
+          </Typography>
+        </div>
+      </div>
+    </footer>
   );
 }
 
-export default FooterOne;
+export default FooterTwo;
