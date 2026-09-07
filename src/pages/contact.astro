@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactSection from "../components/contact/contact-section";
+import FooterContact from "../components/products/footer";
+---
+
+<Layout title="Contact Us">
+  <main>
+    <ContactSection client:only="react" />
+    <FooterContact client:only="react" />
+  </main>
+</Layout>

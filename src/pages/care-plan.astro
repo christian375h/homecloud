@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderCarePlan from "../components/care-plan/header";
+import FeaturesCarePlan from "../components/care-plan/features";
+import PricingCarePlan from "../components/care-plan/pricing";
+import FAQCarePlan from "../components/care-plan/faq";
+import FooterCarePlan from "../components/products/footer";
+---
+
+<Layout title="Care Plan">
+  <main>
+    <HeaderCarePlan client:only="react" />
+    <FeaturesCarePlan client:only="react" />
+    <PricingCarePlan client:only="react" />
+    <FAQCarePlan client:only="react" />
+    <FooterCarePlan client:only="react" />
+  </main>
+</Layout>

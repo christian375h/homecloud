@@ -16,7 +16,7 @@ function Icon({ id, open }) {
   );
 }
 
-export default function FAQProducts() {
+export default function FAQCarePlan() {
   const [open, setOpen] = useState(1);
 
   const handleOpen = (value) => {
@@ -26,34 +26,34 @@ export default function FAQProducts() {
   return (
     <section className="py-20 px-8 max-w-4xl mx-auto">
       <Typography variant="h2" color="blue-gray" className="mb-8 text-center">
-        Frequently Asked Questions
+        Care Plan Questions
       </Typography>
 
       <Fragment>
         <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
           <AccordionHeader onClick={() => handleOpen(1)}>
-            What does "Mirrored Storage" mean?
+            Is a Care Plan required to buy a Home Cloud server?
           </AccordionHeader>
           <AccordionBody className="text-blue-gray-800 text-base">
-            Mirrored storage (RAID 1) uses two identical hard drives inside your server. Every photo or file saved to the server is written to both drives simultaneously. If one drive physically fails over time, all your data remains completely safe on the second drive.
+            No. The Care Plan is entirely optional. When you purchase a Home Cloud server ($600 or $800), you own the hardware outright with zero forced subscriptions. The Care Plan is for homeowners who want hands free updates and priority local support.
           </AccordionBody>
         </Accordion>
 
         <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
           <AccordionHeader onClick={() => handleOpen(2)}>
-            How much data can 1TB or 2TB actually store?
+            Can Home Cloud access my private photos or files?
           </AccordionHeader>
           <AccordionBody className="text-blue-gray-800 text-base">
-            1TB holds roughly 250,000 smartphone photos or 250 HD movies. 2TB holds approximately 500,000 photos. Since the system uses mirroring, a 1TB mirrored server contains two 1TB drives so that you get 1TB of usable fault tolerant capacity.
+            No. Maintenance tasks are strictly limited to system software updates, security patches, and hardware drive health monitoring. Your personal photos, videos, and documents remain stored locally on your server inside your home.
           </AccordionBody>
         </Accordion>
 
         <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
           <AccordionHeader onClick={() => handleOpen(3)}>
-            Do I need to pay any monthly subscription fees?
+            Can I cancel or pause my Care Plan at any time?
           </AccordionHeader>
           <AccordionBody className="text-blue-gray-800 text-base">
-            No. Once your server hardware is purchased and installed in your home, you own the system completely. You get permanent cloud convenience without monthly recurring bills.
+            Yes. Care plans are billed month to month with no contracts or commitments. You can cancel or pause anytime while maintaining full access to your server.
           </AccordionBody>
         </Accordion>
       </Fragment>

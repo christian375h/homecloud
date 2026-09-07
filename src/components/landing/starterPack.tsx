@@ -28,16 +28,10 @@ export function ContentSectionOne() {
               from anywhere in the world, bypassing the need to pay those subscriptions
               that just keep getting more and more expensive.
             </Typography>
-            <div className="inline-flex flex-wrap gap-3">
-              <Button variant="outlined" color="dark" size="lg">
-                get in touch
-              </Button>
-              <Button color="dark" size="lg">our process</Button>
-            </div>
           </div>
           <img
             src="https://images.unsplash.com/photo-1703319952940-ec62d23def39?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="team work"
+            alt="hard-drive"
             className="max-h-[50vh] w-full rounded-xl object-cover object-center md:max-h-[75vh]"
           />
         </div>

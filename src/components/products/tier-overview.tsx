@@ -17,7 +17,7 @@ export function TierOverviewProducts() {
         <div className="mb-20 grid lg:grid-cols-2">
           <div className="lg:pr-10">
             <img
-              src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?q=80&w=1200&auto=format&fit=crop"
+              src="/IMG_9782.jpg"
               alt="1TB Home Cloud Storage Server"
               className="h-full min-h-[20rem] w-full rounded-xl object-cover"
             />
@@ -57,7 +57,7 @@ export function TierOverviewProducts() {
           </div>
           <div className="row-start-1 lg:row-auto lg:pl-10">
             <img
-              src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop"
+              src="/IMG_9783.jpg"
               alt="2TB Home Cloud Server System"
               className="h-full min-h-[20rem] w-full rounded-xl object-cover"
             />

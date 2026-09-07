@@ -28,7 +28,7 @@ export function PricingComparisonProducts() {
             Clear, One-Time Pricing
           </Typography>
           <Typography variant="lead" className="mt-2 !text-gray-500">
-            No subscription traps. Pay once for hardware, setup, and 3 years of warranty protection—own your cloud forever.
+            No subscription traps. Pay once for hardware, setup, and 3 years of warranty protection to own your cloud forever.
           </Typography>
         </div>
 
