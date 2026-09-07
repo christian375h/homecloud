@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeaderProducts from "../components/products/header";
+import TierOverviewProducts from "../components/products/tier-overview";
+import PricingComparisonProducts from "../components/products/pricing-comparison";
+import FAQProducts from "../components/products/faq";
+import FooterProducts from "../components/products/footer";
+---
+
+<Layout title="Home Cloud Products - Private Local Storage">
+  <main>
+    <HeaderProducts client:only="react" />
+    <TierOverviewProducts client:only="react" />
+    <PricingComparisonProducts client:only="react" />
+    <FAQProducts client:only="react" />
+    <FooterProducts client:only="react" />
+  </main>
+</Layout>
