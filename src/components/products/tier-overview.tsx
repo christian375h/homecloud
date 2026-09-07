@@ -31,11 +31,6 @@ export function TierOverviewProducts() {
               <br /><br />
               If one drive ever fails, your photos and documents remain 100% safe on the second drive with zero downtime.
             </Typography>
-            <div className="w-max">
-              <Button size="lg" color="dark">
-                Learn More About 1TB Setup
-              </Button>
-            </div>
           </div>
         </div>
 
@@ -49,11 +44,6 @@ export function TierOverviewProducts() {
               <br /><br />
               Includes full local installation, network configuration, and automatic syncing on all your family's devices.
             </Typography>
-            <div className="w-max">
-              <Button size="lg" color="dark">
-                Learn More About 2TB Setup
-              </Button>
-            </div>
           </div>
           <div className="row-start-1 lg:row-auto lg:pl-10">
             <img

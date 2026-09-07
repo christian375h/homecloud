@@ -2,13 +2,14 @@ import {
   Card,
   CardHeader,
   CardBody,
-
+  Button,
   Typography,
 } from "@material-tailwind/react";
 
 interface CategoriesCardPropsType {
   img: string;
   category: string;
+  desc: string;
 }
 
 function CategoriesCard({ img, category, desc }: CategoriesCardPropsType) {
@@ -73,6 +74,13 @@ export function TeamSectionOne() {
             <CategoriesCard key={key} {...props} />
           ))}
         </div>
+      </div>
+      <div className="mt-12 text-center">
+        <a href="/products">
+          <Button color="dark" size="lg">
+            Learn More
+          </Button>
+        </a>
       </div>
     </section>
   );

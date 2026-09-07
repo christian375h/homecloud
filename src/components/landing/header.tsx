@@ -35,7 +35,9 @@ export function HeroSectionTwo() {
             color="white"
             className="mb-12 w-full opacity-80 md:w-10/12 lg:w-7/12 mx-auto px-28 z-10"
           >
-            Tired of huge companies harvesting all of your personal information like photos, documents and passwords only to go and sell that information to other large companies? Well we are too, and with Home Cloud we aim to get as much of your data out of the hands of these big corporations and back into your control.
+            Stop handing your photos, documents, and passwords over to giant tech
+            corporations. Home Cloud provides pre built and locally installed home servers that bring
+            full digital privacy back under your roof.
           </Typography>
           <div className="w-auto mx-auto z-10">
             <a href="#about-section" onClick={handleScroll}>
