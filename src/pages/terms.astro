@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TermsSection from "../components/legal/terms-section";
+import FooterContact from "../components/products/footer";
+---
+
+<Layout title="Terms of Service - Home Cloud LLC">
+  <main>
+    <TermsSection client:only="react" />
+    <FooterContact client:only="react" />
+  </main>
+</Layout>

@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PrivacySection from "../components/legal/privacy-section";
+import FooterContact from "../components/products/footer";
+---
+
+<Layout title="Privacy Policy - Home Cloud LLC">
+  <main>
+    <PrivacySection client:only="react" />
+    <FooterContact client:only="react" />
+  </main>
+</Layout>
