@@ -42,7 +42,7 @@ export function ContactSection() {
           <div className="text-center">
             <Typography variant="lead" className="mx-auto max-w-2xl text-gray-600">
               This page is currently under construction, feel free to reach out at <br></br>
-              (801) 940-3943 or to christian375h@gmail.com
+              support@homecloud.net
             </Typography>
           </div>
 
