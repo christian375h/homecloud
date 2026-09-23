@@ -1,5 +1,10 @@
 import { Fragment, useState } from "react";
-import { Accordion, AccordionHeader, AccordionBody, Typography } from "@material-tailwind/react";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+  Typography,
+} from "@material-tailwind/react";
 
 function Icon({ id, open }) {
   return (
@@ -16,7 +21,34 @@ function Icon({ id, open }) {
   );
 }
 
-export default function FAQCarePlan() {
+const faqs = [
+  {
+    id: 1,
+    question: "How does the free under hour support offer work?",
+    answer:
+      "When you run into an issue or need assistance, I will diagnose and work on your setup. If the fix takes less than an hour, the service call is free of charge. If it requires more time, you will only be charged a simple hourly rate.",
+  },
+  {
+    id: 2,
+    question: "Are there any recurring monthly subscriptions or hidden fees?",
+    answer:
+      "No. Once you purchase your Home Cloud server, you own the hardware completely. There are zero forced monthly subscriptions or maintenance fees. You only pay for support if you request it for extended repairs.",
+  },
+  {
+    id: 3,
+    question: "What happens if a fix takes longer than expected?",
+    answer:
+      "I'll evaluate the situation right away and let you know before starting any extensive repairs. If a task goes over an hour, you'll simply be billed for the additional time at a standard, transparent hourly rate.",
+  },
+  {
+    id: 4,
+    question: "Can you see my personal photos or files during a service call?",
+    answer:
+      "No. Service and support are strictly focused on hardware health, operating system settings, network connections, and app functionality. Your personal photos, videos, and private documents remain completely encrypted and stored locally on your device.",
+  },
+];
+
+export default function FAQSupport() {
   const [open, setOpen] = useState(1);
 
   const handleOpen = (value) => {
@@ -26,36 +58,24 @@ export default function FAQCarePlan() {
   return (
     <section className="py-20 px-8 max-w-4xl mx-auto">
       <Typography variant="h2" color="blue-gray" className="mb-8 text-center">
-        Care Plan Questions
+        Support & Service FAQs
       </Typography>
 
       <Fragment>
-        <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-          <AccordionHeader onClick={() => handleOpen(1)}>
-            Is a Care Plan required to buy a Home Cloud server?
-          </AccordionHeader>
-          <AccordionBody className="text-blue-gray-800 text-base">
-            No. The Care Plan is entirely optional. When you purchase a Home Cloud server ($600 or $800), you own the hardware outright with zero forced subscriptions. The Care Plan is for homeowners who want hands free updates and priority local support.
-          </AccordionBody>
-        </Accordion>
-
-        <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-          <AccordionHeader onClick={() => handleOpen(2)}>
-            Can Home Cloud access my private photos or files?
-          </AccordionHeader>
-          <AccordionBody className="text-blue-gray-800 text-base">
-            No. Maintenance tasks are strictly limited to system software updates, security patches, and hardware drive health monitoring. Your personal photos, videos, and documents remain stored locally on your server inside your home.
-          </AccordionBody>
-        </Accordion>
-
-        <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-          <AccordionHeader onClick={() => handleOpen(3)}>
-            Can I cancel or pause my Care Plan at any time?
-          </AccordionHeader>
-          <AccordionBody className="text-blue-gray-800 text-base">
-            Yes. Care plans are billed month to month with no contracts or commitments. You can cancel or pause anytime while maintaining full access to your server.
-          </AccordionBody>
-        </Accordion>
+        {faqs.map((faq) => (
+          <Accordion
+            key={faq.id}
+            open={open === faq.id}
+            icon={<Icon id={faq.id} open={open} />}
+          >
+            <AccordionHeader onClick={() => handleOpen(faq.id)}>
+              {faq.question}
+            </AccordionHeader>
+            <AccordionBody className="text-blue-gray-800 text-base">
+              {faq.answer}
+            </AccordionBody>
+          </Accordion>
+        ))}
       </Fragment>
     </section>
   );
