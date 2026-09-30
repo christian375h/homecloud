@@ -9,7 +9,6 @@ import {
   Button,
 } from "@material-tailwind/react";
 import {
-  CloudIcon,
   QuestionMarkCircleIcon,
   ComputerDesktopIcon,
   ShieldCheckIcon,
@@ -97,7 +96,12 @@ export default function Header() {
             variant="h6"
             className="flex items-center gap-2 mr-4 cursor-pointer py-1.5 font-bold"
           >
-            <CloudIcon className="h-6 w-6 text-blue-600" />
+            {/* Replaced CloudIcon with your custom logo image */}
+            <img
+              src="/logos/logo_transparent.png"
+              alt="Home Cloud LLC Logo"
+              className="h-8 w-auto object-contain"
+            />
             Home Cloud LLC
           </Typography>
 
