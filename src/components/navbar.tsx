@@ -96,9 +96,8 @@ export default function Header() {
             variant="h6"
             className="flex items-center gap-2 mr-4 cursor-pointer py-1.5 font-bold"
           >
-            {/* Replaced CloudIcon with your custom logo image */}
             <img
-              src="/logos/logo_transparent.png"
+              src="/logos/stylized_logo_transparent.png"
               alt="Home Cloud LLC Logo"
               className="h-8 w-auto object-contain"
             />
