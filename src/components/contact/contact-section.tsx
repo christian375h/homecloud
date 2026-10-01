@@ -35,14 +35,7 @@ export function ContactSection() {
               Get in Touch
             </Typography>
             <Typography variant="lead" className="mx-auto max-w-2xl text-gray-600">
-              Have questions about setting up a private home server, need a custom quote, or need support? Call, text, or send us a message anytime.
-            </Typography>
-          </div>
-
-          <div className="text-center">
-            <Typography variant="lead" className="mx-auto max-w-2xl text-gray-600">
-              This page is currently under construction, feel free to reach out at <br></br>
-              support@gethomecloud.net
+              Have questions about setting up a private home server? <br></br> Send us an email now! <br></br> <div className="font-bold">setup@gethomecloud.net</div>
             </Typography>
           </div>
 

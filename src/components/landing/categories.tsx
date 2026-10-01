@@ -76,6 +76,12 @@ export function TeamSectionOne() {
         </div>
       </div>
       <div className="mt-12 text-center">
+        <Typography variant="lead" color="gray" className="mb-12">
+
+          Interested? Send us an email to get your own personal Home Cloud today!
+          <br />
+          setup@gethomecloud.net
+        </Typography>
         <a href="/products">
           <Button color="dark" size="lg">
             Learn More
